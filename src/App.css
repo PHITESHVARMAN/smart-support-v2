@@ -1,0 +1,67 @@
+/* --- Global & Layout --- */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; }
+.dashboard-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+/* --- Header --- */
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.btn-logout { background: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+
+/* --- Analytics Cards --- */
+.analytics-section { margin-bottom: 20px; }
+.stats-row { display: flex; gap: 20px; }
+.stat-card { flex: 1; background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.stat-card h4 { margin: 0 0 10px; color: #666; }
+.stat-card p { font-size: 24px; font-weight: bold; margin: 0; }
+.stat-card.blue { border-top: 4px solid #007bff; }
+.stat-card.orange { border-top: 4px solid #ffc107; }
+.stat-card.green { border-top: 4px solid #28a745; }
+
+/* --- Forms --- */
+.form-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+
+/* FIXED THE ERROR BELOW (flexDirection -> flex-direction) */
+.ticket-form { display: flex; flex-direction: column; gap: 10px; }
+
+.form-row { display: flex; gap: 10px; }
+.form-row input, .form-row select { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 80px; font-family: inherit; }
+.btn-submit { background: #28a745; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+/* --- Table --- */
+.list-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.ticket-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.ticket-table th { text-align: left; padding: 12px; background: #007bff; color: white; }
+.ticket-table td { padding: 12px; border-bottom: 1px solid #eee; }
+.status-badge { padding: 4px 8px; border-radius: 12px; font-size: 0.85em; color: white; }
+.status-badge.open { background: #dc3545; } /* Red */
+.status-badge.in-progress { background: #ffc107; color: black; } /* Yellow */
+.status-badge.resolved { background: #28a745; } /* Green */
+
+/* --- Chat Modal --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: white; width: 500px; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.modal-header { padding: 15px; background: #f8f9fa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+.btn-close { background: none; border: none; font-size: 1.2em; cursor: pointer; }
+
+.chat-box { height: 300px; overflow-y: auto; padding: 15px; background: #fff; }
+.message { margin-bottom: 10px; padding: 8px 12px; border-radius: 15px; max-width: 70%; font-size: 0.9em; }
+.message.mine { background: #007bff; color: white; margin-left: auto; border-bottom-right-radius: 2px; }
+.message.theirs { background: #f1f0f0; color: #333; margin-right: auto; border-bottom-left-radius: 2px; }
+
+/* --- Technician Controls --- */
+.technician-controls { background: #e9ecef; padding: 10px 15px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+.action-buttons { display: flex; gap: 10px; }
+.btn-status { padding: 5px 10px; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.85em; }
+.btn-status.orange { background: #fd7e14; }
+.btn-status.green { background: #28a745; }
+
+.chat-input-area { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
+.chat-input-area input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+.btn-send { background: #007bff; color: white; border: none; padding: 0 20px; border-radius: 4px; cursor: pointer; }
+
+/* --- Login Page --- */
+.login-container { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f6f9; }
+.login-card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
+.login-card input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+.login-btn { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+.login-btn:hover { background: #0056b3; }
